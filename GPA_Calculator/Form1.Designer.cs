@@ -30,20 +30,13 @@
         {
             this.lblSubject = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.txtSub1 = new System.Windows.Forms.TextBox();
             this.dgvTable = new System.Windows.Forms.DataGridView();
             this.subjectName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.result = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.subCredit = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.credit = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.gpa = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.weight = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.txtSub2 = new System.Windows.Forms.TextBox();
-            this.txtSub3 = new System.Windows.Forms.TextBox();
-            this.txtSub4 = new System.Windows.Forms.TextBox();
-            this.txtSub5 = new System.Windows.Forms.TextBox();
-            this.txtSub6 = new System.Windows.Forms.TextBox();
-            this.txtSub7 = new System.Windows.Forms.TextBox();
-            this.txtSub8 = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.txtCredit1 = new System.Windows.Forms.TextBox();
             this.txtCredit2 = new System.Windows.Forms.TextBox();
@@ -66,6 +59,15 @@
             this.cbResult7 = new System.Windows.Forms.ComboBox();
             this.cbResult8 = new System.Windows.Forms.ComboBox();
             this.cbWeight = new System.Windows.Forms.ComboBox();
+            this.cbSubject1 = new System.Windows.Forms.ComboBox();
+            this.cbSubject2 = new System.Windows.Forms.ComboBox();
+            this.cbSubject3 = new System.Windows.Forms.ComboBox();
+            this.cbSubject4 = new System.Windows.Forms.ComboBox();
+            this.cbSubject5 = new System.Windows.Forms.ComboBox();
+            this.cbSubject6 = new System.Windows.Forms.ComboBox();
+            this.cbSubject7 = new System.Windows.Forms.ComboBox();
+            this.cbSubject8 = new System.Windows.Forms.ComboBox();
+            this.btnTotal = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvTable)).BeginInit();
             this.SuspendLayout();
             // 
@@ -91,24 +93,17 @@
             this.label2.TabIndex = 1;
             this.label2.Text = "Resalt";
             // 
-            // txtSub1
-            // 
-            this.txtSub1.Location = new System.Drawing.Point(15, 80);
-            this.txtSub1.Margin = new System.Windows.Forms.Padding(4);
-            this.txtSub1.Name = "txtSub1";
-            this.txtSub1.Size = new System.Drawing.Size(279, 27);
-            this.txtSub1.TabIndex = 2;
-            // 
             // dgvTable
             // 
             this.dgvTable.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvTable.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.subjectName,
             this.result,
+            this.subCredit,
             this.credit,
             this.gpa,
             this.weight});
-            this.dgvTable.Location = new System.Drawing.Point(770, 40);
+            this.dgvTable.Location = new System.Drawing.Point(748, 40);
             this.dgvTable.Margin = new System.Windows.Forms.Padding(4);
             this.dgvTable.Name = "dgvTable";
             this.dgvTable.RowHeadersWidth = 51;
@@ -130,6 +125,13 @@
             this.result.Name = "result";
             this.result.Width = 125;
             // 
+            // subCredit
+            // 
+            this.subCredit.HeaderText = "SubCredit";
+            this.subCredit.MinimumWidth = 6;
+            this.subCredit.Name = "subCredit";
+            this.subCredit.Width = 125;
+            // 
             // credit
             // 
             this.credit.HeaderText = "Credit";
@@ -150,63 +152,6 @@
             this.weight.MinimumWidth = 6;
             this.weight.Name = "weight";
             this.weight.Width = 125;
-            // 
-            // txtSub2
-            // 
-            this.txtSub2.Location = new System.Drawing.Point(15, 115);
-            this.txtSub2.Margin = new System.Windows.Forms.Padding(4);
-            this.txtSub2.Name = "txtSub2";
-            this.txtSub2.Size = new System.Drawing.Size(279, 27);
-            this.txtSub2.TabIndex = 2;
-            // 
-            // txtSub3
-            // 
-            this.txtSub3.Location = new System.Drawing.Point(15, 150);
-            this.txtSub3.Margin = new System.Windows.Forms.Padding(4);
-            this.txtSub3.Name = "txtSub3";
-            this.txtSub3.Size = new System.Drawing.Size(279, 27);
-            this.txtSub3.TabIndex = 2;
-            // 
-            // txtSub4
-            // 
-            this.txtSub4.Location = new System.Drawing.Point(15, 185);
-            this.txtSub4.Margin = new System.Windows.Forms.Padding(4);
-            this.txtSub4.Name = "txtSub4";
-            this.txtSub4.Size = new System.Drawing.Size(279, 27);
-            this.txtSub4.TabIndex = 2;
-            // 
-            // txtSub5
-            // 
-            this.txtSub5.Location = new System.Drawing.Point(15, 220);
-            this.txtSub5.Margin = new System.Windows.Forms.Padding(4);
-            this.txtSub5.Name = "txtSub5";
-            this.txtSub5.Size = new System.Drawing.Size(279, 27);
-            this.txtSub5.TabIndex = 2;
-            this.txtSub5.TextChanged += new System.EventHandler(this.textBox5_TextChanged);
-            // 
-            // txtSub6
-            // 
-            this.txtSub6.Location = new System.Drawing.Point(15, 255);
-            this.txtSub6.Margin = new System.Windows.Forms.Padding(4);
-            this.txtSub6.Name = "txtSub6";
-            this.txtSub6.Size = new System.Drawing.Size(279, 27);
-            this.txtSub6.TabIndex = 2;
-            // 
-            // txtSub7
-            // 
-            this.txtSub7.Location = new System.Drawing.Point(15, 290);
-            this.txtSub7.Margin = new System.Windows.Forms.Padding(4);
-            this.txtSub7.Name = "txtSub7";
-            this.txtSub7.Size = new System.Drawing.Size(279, 27);
-            this.txtSub7.TabIndex = 2;
-            // 
-            // txtSub8
-            // 
-            this.txtSub8.Location = new System.Drawing.Point(15, 325);
-            this.txtSub8.Margin = new System.Windows.Forms.Padding(4);
-            this.txtSub8.Name = "txtSub8";
-            this.txtSub8.Size = new System.Drawing.Size(279, 27);
-            this.txtSub8.TabIndex = 2;
             // 
             // label1
             // 
@@ -307,7 +252,7 @@
             // btnReset
             // 
             this.btnReset.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnReset.Location = new System.Drawing.Point(438, 544);
+            this.btnReset.Location = new System.Drawing.Point(33, 544);
             this.btnReset.Margin = new System.Windows.Forms.Padding(4);
             this.btnReset.Name = "btnReset";
             this.btnReset.Size = new System.Drawing.Size(122, 51);
@@ -319,7 +264,7 @@
             // btnSubmit
             // 
             this.btnSubmit.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSubmit.Location = new System.Drawing.Point(603, 544);
+            this.btnSubmit.Location = new System.Drawing.Point(163, 544);
             this.btnSubmit.Margin = new System.Windows.Forms.Padding(4);
             this.btnSubmit.Name = "btnSubmit";
             this.btnSubmit.Size = new System.Drawing.Size(132, 51);
@@ -517,11 +462,113 @@
             this.cbWeight.Size = new System.Drawing.Size(121, 28);
             this.cbWeight.TabIndex = 6;
             // 
+            // cbSubject1
+            // 
+            this.cbSubject1.FormattingEnabled = true;
+            this.cbSubject1.Items.AddRange(new object[] {
+            "Maths",
+            "Accounting ",
+            "Statistic",
+            "Mrico Economic",
+            "Macro Economic"});
+            this.cbSubject1.Location = new System.Drawing.Point(33, 82);
+            this.cbSubject1.Name = "cbSubject1";
+            this.cbSubject1.Size = new System.Drawing.Size(284, 28);
+            this.cbSubject1.TabIndex = 7;
+            // 
+            // cbSubject2
+            // 
+            this.cbSubject2.FormattingEnabled = true;
+            this.cbSubject2.Items.AddRange(new object[] {
+            "Maths",
+            "Accounting ",
+            "Statistic",
+            "Mrico Economic",
+            "Macro Economic"});
+            this.cbSubject2.Location = new System.Drawing.Point(33, 114);
+            this.cbSubject2.Name = "cbSubject2";
+            this.cbSubject2.Size = new System.Drawing.Size(284, 28);
+            this.cbSubject2.TabIndex = 7;
+            // 
+            // cbSubject3
+            // 
+            this.cbSubject3.FormattingEnabled = true;
+            this.cbSubject3.Items.AddRange(new object[] {
+            "Maths",
+            "Accounting ",
+            "Statistic",
+            "Mrico Economic",
+            "Macro Economic"});
+            this.cbSubject3.Location = new System.Drawing.Point(33, 150);
+            this.cbSubject3.Name = "cbSubject3";
+            this.cbSubject3.Size = new System.Drawing.Size(284, 28);
+            this.cbSubject3.TabIndex = 7;
+            // 
+            // cbSubject4
+            // 
+            this.cbSubject4.FormattingEnabled = true;
+            this.cbSubject4.Location = new System.Drawing.Point(33, 184);
+            this.cbSubject4.Name = "cbSubject4";
+            this.cbSubject4.Size = new System.Drawing.Size(284, 28);
+            this.cbSubject4.TabIndex = 7;
+            // 
+            // cbSubject5
+            // 
+            this.cbSubject5.FormattingEnabled = true;
+            this.cbSubject5.Location = new System.Drawing.Point(33, 220);
+            this.cbSubject5.Name = "cbSubject5";
+            this.cbSubject5.Size = new System.Drawing.Size(284, 28);
+            this.cbSubject5.TabIndex = 7;
+            // 
+            // cbSubject6
+            // 
+            this.cbSubject6.FormattingEnabled = true;
+            this.cbSubject6.Location = new System.Drawing.Point(33, 255);
+            this.cbSubject6.Name = "cbSubject6";
+            this.cbSubject6.Size = new System.Drawing.Size(284, 28);
+            this.cbSubject6.TabIndex = 7;
+            // 
+            // cbSubject7
+            // 
+            this.cbSubject7.FormattingEnabled = true;
+            this.cbSubject7.Location = new System.Drawing.Point(33, 290);
+            this.cbSubject7.Name = "cbSubject7";
+            this.cbSubject7.Size = new System.Drawing.Size(284, 28);
+            this.cbSubject7.TabIndex = 7;
+            // 
+            // cbSubject8
+            // 
+            this.cbSubject8.FormattingEnabled = true;
+            this.cbSubject8.Location = new System.Drawing.Point(33, 324);
+            this.cbSubject8.Name = "cbSubject8";
+            this.cbSubject8.Size = new System.Drawing.Size(284, 28);
+            this.cbSubject8.TabIndex = 7;
+            // 
+            // btnTotal
+            // 
+            this.btnTotal.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnTotal.Location = new System.Drawing.Point(316, 544);
+            this.btnTotal.Margin = new System.Windows.Forms.Padding(4);
+            this.btnTotal.Name = "btnTotal";
+            this.btnTotal.Size = new System.Drawing.Size(141, 51);
+            this.btnTotal.TabIndex = 5;
+            this.btnTotal.Text = "Total GPA";
+            this.btnTotal.UseVisualStyleBackColor = true;
+            this.btnTotal.Click += new System.EventHandler(this.btnTotal_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1431, 621);
+            this.Controls.Add(this.cbSubject8);
+            this.Controls.Add(this.cbSubject7);
+            this.Controls.Add(this.cbSubject6);
+            this.Controls.Add(this.cbSubject5);
+            this.Controls.Add(this.cbSubject4);
+            this.Controls.Add(this.cbSubject3);
+            this.Controls.Add(this.cbSubject2);
+            this.Controls.Add(this.cbSubject1);
             this.Controls.Add(this.cbResult8);
             this.Controls.Add(this.cbResult7);
             this.Controls.Add(this.cbResult6);
@@ -531,28 +578,21 @@
             this.Controls.Add(this.cbResult2);
             this.Controls.Add(this.cbWeight);
             this.Controls.Add(this.cbResult1);
+            this.Controls.Add(this.btnTotal);
             this.Controls.Add(this.btnSubmit);
             this.Controls.Add(this.btnReset);
             this.Controls.Add(this.dgvTable);
             this.Controls.Add(this.txtCredit8);
             this.Controls.Add(this.txtCredit7);
-            this.Controls.Add(this.txtSub8);
             this.Controls.Add(this.txtCredit6);
-            this.Controls.Add(this.txtSub7);
             this.Controls.Add(this.txtCredit5);
-            this.Controls.Add(this.txtSub6);
             this.Controls.Add(this.txtCredit4);
-            this.Controls.Add(this.txtSub5);
             this.Controls.Add(this.txtCredit3);
-            this.Controls.Add(this.txtSub4);
             this.Controls.Add(this.txtCredit2);
-            this.Controls.Add(this.txtSub3);
             this.Controls.Add(this.txtCredit1);
-            this.Controls.Add(this.txtSub2);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.lblWeight);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.txtSub1);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.lblSubject);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -570,15 +610,7 @@
 
         private System.Windows.Forms.Label lblSubject;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox txtSub1;
         private System.Windows.Forms.DataGridView dgvTable;
-        private System.Windows.Forms.TextBox txtSub2;
-        private System.Windows.Forms.TextBox txtSub3;
-        private System.Windows.Forms.TextBox txtSub4;
-        private System.Windows.Forms.TextBox txtSub5;
-        private System.Windows.Forms.TextBox txtSub6;
-        private System.Windows.Forms.TextBox txtSub7;
-        private System.Windows.Forms.TextBox txtSub8;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox txtCredit1;
         private System.Windows.Forms.TextBox txtCredit2;
@@ -592,11 +624,6 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Button btnReset;
         private System.Windows.Forms.Button btnSubmit;
-        private System.Windows.Forms.DataGridViewTextBoxColumn subjectName;
-        private System.Windows.Forms.DataGridViewTextBoxColumn result;
-        private System.Windows.Forms.DataGridViewTextBoxColumn credit;
-        private System.Windows.Forms.DataGridViewTextBoxColumn gpa;
-        private System.Windows.Forms.DataGridViewTextBoxColumn weight;
         private System.Windows.Forms.ComboBox cbResult1;
         private System.Windows.Forms.ComboBox cbResult2;
         private System.Windows.Forms.ComboBox cbResult3;
@@ -606,6 +633,21 @@
         private System.Windows.Forms.ComboBox cbResult7;
         private System.Windows.Forms.ComboBox cbResult8;
         private System.Windows.Forms.ComboBox cbWeight;
+        private System.Windows.Forms.ComboBox cbSubject1;
+        private System.Windows.Forms.ComboBox cbSubject2;
+        private System.Windows.Forms.ComboBox cbSubject3;
+        private System.Windows.Forms.ComboBox cbSubject4;
+        private System.Windows.Forms.ComboBox cbSubject5;
+        private System.Windows.Forms.ComboBox cbSubject6;
+        private System.Windows.Forms.ComboBox cbSubject7;
+        private System.Windows.Forms.ComboBox cbSubject8;
+        private System.Windows.Forms.DataGridViewTextBoxColumn subjectName;
+        private System.Windows.Forms.DataGridViewTextBoxColumn result;
+        private System.Windows.Forms.DataGridViewTextBoxColumn subCredit;
+        private System.Windows.Forms.DataGridViewTextBoxColumn credit;
+        private System.Windows.Forms.DataGridViewTextBoxColumn gpa;
+        private System.Windows.Forms.DataGridViewTextBoxColumn weight;
+        private System.Windows.Forms.Button btnTotal;
     }
 }
 
