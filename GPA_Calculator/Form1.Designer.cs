@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
             this.lblSubject = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.dgvTable = new System.Windows.Forms.DataGridView();
@@ -65,6 +66,7 @@
             this.cbCredit5 = new System.Windows.Forms.ComboBox();
             this.cbCredit6 = new System.Windows.Forms.ComboBox();
             this.cbCredit7 = new System.Windows.Forms.ComboBox();
+            this.label3 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgvTable)).BeginInit();
             this.SuspendLayout();
             // 
@@ -72,6 +74,7 @@
             // 
             this.lblSubject.AutoSize = true;
             this.lblSubject.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblSubject.ForeColor = System.Drawing.Color.Navy;
             this.lblSubject.Location = new System.Drawing.Point(25, 36);
             this.lblSubject.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblSubject.Name = "lblSubject";
@@ -83,6 +86,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.Navy;
             this.label2.Location = new System.Drawing.Point(338, 36);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
@@ -105,6 +109,14 @@
             this.dgvTable.Margin = new System.Windows.Forms.Padding(4);
             this.dgvTable.Name = "dgvTable";
             this.dgvTable.RowHeadersWidth = 51;
+            dataGridViewCellStyle10.BackColor = System.Drawing.Color.MistyRose;
+            dataGridViewCellStyle10.Font = new System.Drawing.Font("Arial Rounded MT Bold", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle10.ForeColor = System.Drawing.Color.DarkBlue;
+            dataGridViewCellStyle10.NullValue = null;
+            dataGridViewCellStyle10.SelectionBackColor = System.Drawing.Color.DarkOliveGreen;
+            dataGridViewCellStyle10.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle10.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvTable.RowsDefaultCellStyle = dataGridViewCellStyle10;
             this.dgvTable.RowTemplate.Height = 24;
             this.dgvTable.Size = new System.Drawing.Size(591, 357);
             this.dgvTable.TabIndex = 3;
@@ -157,6 +169,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.Navy;
             this.label1.Location = new System.Drawing.Point(482, 36);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
@@ -168,6 +181,7 @@
             // 
             this.lblWeight.AutoSize = true;
             this.lblWeight.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblWeight.ForeColor = System.Drawing.Color.Navy;
             this.lblWeight.Location = new System.Drawing.Point(590, 36);
             this.lblWeight.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblWeight.Name = "lblWeight";
@@ -187,6 +201,7 @@
             // 
             // btnReset
             // 
+            this.btnReset.BackColor = System.Drawing.Color.YellowGreen;
             this.btnReset.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnReset.Location = new System.Drawing.Point(195, 324);
             this.btnReset.Margin = new System.Windows.Forms.Padding(4);
@@ -194,11 +209,12 @@
             this.btnReset.Size = new System.Drawing.Size(110, 46);
             this.btnReset.TabIndex = 5;
             this.btnReset.Text = "Reset";
-            this.btnReset.UseVisualStyleBackColor = true;
+            this.btnReset.UseVisualStyleBackColor = false;
             this.btnReset.Click += new System.EventHandler(this.btnReset_Click);
             // 
             // btnSubmit
             // 
+            this.btnSubmit.BackColor = System.Drawing.Color.YellowGreen;
             this.btnSubmit.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSubmit.Location = new System.Drawing.Point(313, 324);
             this.btnSubmit.Margin = new System.Windows.Forms.Padding(4);
@@ -206,7 +222,7 @@
             this.btnSubmit.Size = new System.Drawing.Size(119, 46);
             this.btnSubmit.TabIndex = 5;
             this.btnSubmit.Text = "Submit";
-            this.btnSubmit.UseVisualStyleBackColor = true;
+            this.btnSubmit.UseVisualStyleBackColor = false;
             this.btnSubmit.Click += new System.EventHandler(this.btnSubmit_Click);
             // 
             // cbResult1
@@ -229,6 +245,7 @@
             this.cbResult1.Name = "cbResult1";
             this.cbResult1.Size = new System.Drawing.Size(81, 26);
             this.cbResult1.TabIndex = 6;
+            this.cbResult1.SelectedIndexChanged += new System.EventHandler(this.cbResult1_SelectedIndexChanged);
             // 
             // cbResult2
             // 
@@ -453,6 +470,7 @@
             this.cbSubject1.Name = "cbSubject1";
             this.cbSubject1.Size = new System.Drawing.Size(256, 26);
             this.cbSubject1.TabIndex = 7;
+            this.cbSubject1.SelectedIndexChanged += new System.EventHandler(this.cbSubject1_SelectedIndexChanged);
             // 
             // cbSubject2
             // 
@@ -960,6 +978,7 @@
             // 
             // btnTotal
             // 
+            this.btnTotal.BackColor = System.Drawing.Color.YellowGreen;
             this.btnTotal.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnTotal.Location = new System.Drawing.Point(440, 324);
             this.btnTotal.Margin = new System.Windows.Forms.Padding(4);
@@ -967,7 +986,7 @@
             this.btnTotal.Size = new System.Drawing.Size(127, 46);
             this.btnTotal.TabIndex = 5;
             this.btnTotal.Text = "Total GPA";
-            this.btnTotal.UseVisualStyleBackColor = true;
+            this.btnTotal.UseVisualStyleBackColor = false;
             this.btnTotal.Click += new System.EventHandler(this.btnTotal_Click);
             // 
             // cbCredit1
@@ -984,6 +1003,7 @@
             this.cbCredit1.Name = "cbCredit1";
             this.cbCredit1.Size = new System.Drawing.Size(81, 26);
             this.cbCredit1.TabIndex = 6;
+            this.cbCredit1.SelectedIndexChanged += new System.EventHandler(this.cbCredit1_SelectedIndexChanged);
             // 
             // cbCredit2
             // 
@@ -999,6 +1019,7 @@
             this.cbCredit2.Name = "cbCredit2";
             this.cbCredit2.Size = new System.Drawing.Size(81, 26);
             this.cbCredit2.TabIndex = 6;
+            this.cbCredit2.SelectedIndexChanged += new System.EventHandler(this.cbCredit2_SelectedIndexChanged);
             // 
             // cbCredit3
             // 
@@ -1014,6 +1035,7 @@
             this.cbCredit3.Name = "cbCredit3";
             this.cbCredit3.Size = new System.Drawing.Size(81, 26);
             this.cbCredit3.TabIndex = 6;
+            this.cbCredit3.SelectedIndexChanged += new System.EventHandler(this.cbCredit3_SelectedIndexChanged);
             // 
             // cbCredit4
             // 
@@ -1029,6 +1051,7 @@
             this.cbCredit4.Name = "cbCredit4";
             this.cbCredit4.Size = new System.Drawing.Size(81, 26);
             this.cbCredit4.TabIndex = 6;
+            this.cbCredit4.SelectedIndexChanged += new System.EventHandler(this.cbCredit4_SelectedIndexChanged);
             // 
             // cbCredit5
             // 
@@ -1044,6 +1067,7 @@
             this.cbCredit5.Name = "cbCredit5";
             this.cbCredit5.Size = new System.Drawing.Size(81, 26);
             this.cbCredit5.TabIndex = 6;
+            this.cbCredit5.SelectedIndexChanged += new System.EventHandler(this.cbCredit5_SelectedIndexChanged);
             // 
             // cbCredit6
             // 
@@ -1059,6 +1083,7 @@
             this.cbCredit6.Name = "cbCredit6";
             this.cbCredit6.Size = new System.Drawing.Size(81, 26);
             this.cbCredit6.TabIndex = 6;
+            this.cbCredit6.SelectedIndexChanged += new System.EventHandler(this.cbCredit6_SelectedIndexChanged);
             // 
             // cbCredit7
             // 
@@ -1074,6 +1099,19 @@
             this.cbCredit7.Name = "cbCredit7";
             this.cbCredit7.Size = new System.Drawing.Size(81, 26);
             this.cbCredit7.TabIndex = 6;
+            this.cbCredit7.SelectedIndexChanged += new System.EventHandler(this.cbCredit7_SelectedIndexChanged);
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.Navy;
+            this.label3.Location = new System.Drawing.Point(1092, 9);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(193, 20);
+            this.label3.TabIndex = 1;
+            this.label3.Text = "SP Software Solution ";
             // 
             // Form1
             // 
@@ -1110,6 +1148,7 @@
             this.Controls.Add(this.label4);
             this.Controls.Add(this.lblWeight);
             this.Controls.Add(this.label1);
+            this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.lblSubject);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -1117,7 +1156,7 @@
             this.MaximizeBox = false;
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Form1";
+            this.Text = "Trincomale Campus GPA Calculator";
             this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvTable)).EndInit();
             this.ResumeLayout(false);
@@ -1164,6 +1203,7 @@
         private System.Windows.Forms.ComboBox cbCredit5;
         private System.Windows.Forms.ComboBox cbCredit6;
         private System.Windows.Forms.ComboBox cbCredit7;
+        private System.Windows.Forms.Label label3;
     }
 }
 

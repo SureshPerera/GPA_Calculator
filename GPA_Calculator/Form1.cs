@@ -18,13 +18,71 @@ namespace GPA_Calculator
         string R1, R2, R3, R4, R5, R6, R7;
         double MULCS1, MULCS2, MULCS3, MULCS4, MULCS5, MULCS6, MULCS7;
 
+        private void cbCredit2_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            cbSubject3.Visible = true;
+            cbResult3.Visible = true;
+        }
+
+        private void cbCredit3_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            cbSubject4.Visible = true;
+            cbResult4.Visible = true;
+        }
+
+        private void cbCredit4_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            cbSubject5.Visible = true;
+            cbResult5.Visible = true;
+        }
+
+        private void cbCredit5_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            cbSubject6.Visible = true;
+            cbResult6.Visible =true;
+        }
+
+        private void cbCredit6_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            cbSubject7.Visible = true;
+            cbResult7.Visible = true;
+        }
+
+        private void cbCredit7_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            btnSubmit.Enabled = true;
+        }
+
+        private void cbCredit1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            cbSubject2.Visible = true;
+            cbResult2.Visible = true;
+        }
+
+        private void cbResult1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+           
+        }
+
         double gpaTotal1;
         double finalGpa;
+
+        private void cbSubject1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            btnReset.Enabled = true;
+            
+        }
+
 
 
         private void Form1_Load(object sender, EventArgs e)
         {
             cbSubject1.Select();
+            btnTotal.Enabled = false;
+            btnReset.Enabled = false;
+            btnSubmit.Enabled = false;
+            cbSubject2.Visible = cbSubject3.Visible = cbSubject4.Visible = cbSubject5.Visible = cbSubject6.Visible = cbSubject7.Visible = false;
+            cbResult2.Visible = cbResult3.Visible =cbResult4.Visible = cbResult5.Visible =cbResult6.Visible = cbResult7.Visible = false;
         }
 
         string SC1,SC2, SC3, SC4, SC5, SC6, SC7;
@@ -72,7 +130,7 @@ namespace GPA_Calculator
 
                     finalGpa = gpaTotal1 / creditTotal;
 
-                    dgvTable.Rows.Add(null, "Total", subCreditTotal, creditTotal, finalGpa);
+                    dgvTable.Rows.Add("Total", null, subCreditTotal, creditTotal, finalGpa);
                 }
                 else
                 {
@@ -500,7 +558,7 @@ namespace GPA_Calculator
                 addRows(cbSubject7.Text, R7, SC7, cbCredit6.Text, gpas, cbWeight.Text);
                 //addRows(cbSubject8.Text, R8, SC8, txtCredit8.Text, gpas, cbWeight.Text);
                 
-
+                btnTotal.Enabled = true;
             }
             catch (Exception ex)
             {
@@ -528,6 +586,8 @@ namespace GPA_Calculator
             
             dgvTable.Rows.Clear();
             cbSubject1.Select();
+            btnSubmit.Enabled = false;
+            btnTotal.Enabled = false;
             MessageBox.Show("Clear Succussfully");
         }
     }
