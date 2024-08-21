@@ -13,9 +13,22 @@ namespace GPA_Calculator
     public partial class Form1 : Form
     {
         string subjectNames, results, weights, gpas , subCredits;
-        string total1;
-        string R1, R2, R3, R4, R5, R6, R7, R8;
-        string SC1,SC2, SC3, SC4, SC5, SC6, SC7,SC8;
+        double subCreditTotal;
+        double creditTotal;
+        string R1, R2, R3, R4, R5, R6, R7;
+        double MULCS1, MULCS2, MULCS3, MULCS4, MULCS5, MULCS6, MULCS7;
+
+        double gpaTotal1;
+        double finalGpa;
+
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            cbSubject1.Select();
+        }
+
+        string SC1,SC2, SC3, SC4, SC5, SC6, SC7;
+        string C1,C2,C3,C4,C5,C6,C7;
 
         public Form1()
         {
@@ -31,11 +44,51 @@ namespace GPA_Calculator
 
         private void btnTotal_Click(object sender, EventArgs e)
         {
-            for (int i = 0; i <= dgvTable.Rows.Count -1; i++)
+            try
             {
-                total1 += double.Parse(dgvTable.Rows[i].Cells[3].Value.ToString());
+                
+                if (C1 + C2+ C3+ C4+ C5+ C6+ C7 != "" )
+                {
+                    for (int i = 0; i <= dgvTable.Rows.Count - 1; i++)
+                    {
+                        subCreditTotal = double.Parse(SC1) + double.Parse(SC2) + double.Parse(SC3) + double.Parse(SC4) + double.Parse(SC5) + double.Parse(SC6) + double.Parse(SC7);
+
+                    }
+
+                    for (int i = 0; i <= dgvTable.Rows.Count - 1; i++)
+                    {
+                        creditTotal = double.Parse(C1) + double.Parse(C2) + double.Parse(C3) + double.Parse(C4) + double.Parse(C5) + double.Parse(C6) + double.Parse(C7);
+                    }
+
+                    MULCS1 = double.Parse(C1) * double.Parse(SC1);
+                    MULCS2 = double.Parse(C2) * double.Parse(SC2);
+                    MULCS3 = double.Parse(C3) * double.Parse(SC3);
+                    MULCS4 = double.Parse(C4) * double.Parse(SC4);
+                    MULCS5 = double.Parse(C5) * double.Parse(SC5);
+                    MULCS6 = double.Parse(C6) * double.Parse(SC6);
+                    MULCS7 = double.Parse(C7) * double.Parse(SC7);
+
+                    gpaTotal1 = MULCS1 + MULCS2 +MULCS3 + MULCS4 + MULCS5 + MULCS6 + MULCS7;
+
+                    finalGpa = gpaTotal1 / creditTotal;
+
+                    dgvTable.Rows.Add(null, "Total", subCreditTotal, creditTotal, finalGpa);
+                }
+                else
+                {
+                    MessageBox.Show("Please Enter Credit");
+                    
+                }
+                
+                
+
             }
-            dgvTable.Rows.Add(null, "Total", total1, null, null, null);
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+
+            
         }
 
         private void textBox5_TextChanged(object sender, EventArgs e)
@@ -52,17 +105,26 @@ namespace GPA_Calculator
             R5 = cbResult5.Text;
             R6 = cbResult6.Text;
             R7 = cbResult7.Text;
-            R8 = cbResult8.Text;
+
+            C1 = cbCredit1.Text;
+            C2 = cbCredit2.Text;
+            C3 = cbCredit3.Text;
+            C4 = cbCredit4.Text;
+            C5 = cbCredit5.Text;
+            C6 = cbCredit6.Text;
+            C7 = cbCredit7.Text;
+            
+            
             try
             {
                 //selecting result credit R1
                 if (R1 == "A+")
                 {
-                    SC1 = "4";
+                    SC1 = "4.0";
                 }
                 else if (R1 == "A")
                 {
-                    SC1 = "4";
+                    SC1 = "4.0";
                 }
                 else if (R1 == "A-")
                 {
@@ -70,49 +132,47 @@ namespace GPA_Calculator
                 }
                 else if (R1 == "B+")
                 {
-                    SC1 = "3.5";
+                    SC1 = "3.3";
                 }
                 else if (R1 == "B")
                 {
-                    SC1 = "3.3";
+                    SC1 = "3.0";
                 }
                 else if (R1 == "B-")
                 {
-                    SC1 = "3";
+                    SC1 = "2.7";
                 }else if (R1 == "C+")
                 {
-                    SC1 = "2.7";
+                    SC1 = "2.3";
                 }else if (R1 == "C")
                 {
-                    SC1 = "2.5";
+                    SC1 = "2.0";
                 }else if (R1 == "C-")
                 {
-                    SC1 = "2.3";
+                    SC1 = "1.7";
                 }else if (R1 == "D+")
                 {
-                    SC1 = "2.0";
+                    SC1 = "1.3";
                 }else if (R1 == "D")
                 {
-                    SC1 = "1.7";
-                }else if (R1 == "D-")
-                {
-                    SC1 = "1.5";
+                    SC1 = "1.0";
+                
                 }else if (R1 == "E")
                 {
-                    SC1 = "0";
+                    SC1 = "0.0";
                 }
                 else
                 {
-                    SC1 = "AB";
+                    SC1 = "0.0";
                 }
                 //selecting result credit R2
                 if (R2 == "A+")
                 {
-                    SC2 = "4";
+                    SC2 = "4.0";
                 }
                 else if (R2 == "A")
                 {
-                    SC2 = "4";
+                    SC2 = "4.0";
                 }
                 else if (R2 == "A-")
                 {
@@ -120,56 +180,53 @@ namespace GPA_Calculator
                 }
                 else if (R2 == "B+")
                 {
-                    SC2 = "3.5";
+                    SC2 = "3.3";
                 }
                 else if (R2 == "B")
                 {
-                    SC2 = "3.3";
+                    SC2 = "3.0";
                 }
                 else if (R2 == "B-")
                 {
-                    SC2 = "3";
+                    SC2 = "2.7";
                 }
                 else if (R2 == "C+")
                 {
-                    SC2 = "2.7";
+                    SC2 = "2.3";
                 }
                 else if (R2 == "C")
                 {
-                    SC2 = "2.5";
+                    SC2 = "2.0";
                 }
                 else if (R2 == "C-")
                 {
-                    SC2 = "2.3";
+                    SC2 = "1.7";
                 }
                 else if (R2 == "D+")
                 {
-                    SC2 = "2.0";
+                    SC2 = "1.3";
                 }
                 else if (R2 == "D")
                 {
-                    SC2 = "1.7";
+                    SC2 = "1.0";
                 }
-                else if (R2 == "D-")
-                {
-                    SC2 = "1.5";
-                }
+               
                 else if (R2 == "E")
                 {
-                    SC2 = "0";
+                    SC2 = "0.0";
                 }
                 else
                 {
-                    SC2 = "AB";
+                    SC2 = "0.0";
                 }
                 //selecting result R3
                 if (R3 == "A+")
                 {
-                    SC3 = "4";
+                    SC3 = "4.0";
                 }
                 else if (R3 == "A")
                 {
-                    SC3 = "4";
+                    SC3 = "4.0";
                 }
                 else if (R3 == "A-")
                 {
@@ -177,56 +234,53 @@ namespace GPA_Calculator
                 }
                 else if (R3 == "B+")
                 {
-                    SC3 = "3.5";
+                    SC3 = "3.3";
                 }
                 else if (R3 == "B")
                 {
-                    SC3 = "3.3";
+                    SC3 = "3.0";
                 }
                 else if (R3 == "B-")
                 {
-                    SC3 = "3";
+                    SC3 = "2.7";
                 }
                 else if (R3 == "C+")
                 {
-                    SC3 = "2.7";
+                    SC3 = "2.3";
                 }
                 else if (R3 == "C")
                 {
-                    SC3 = "2.5";
+                    SC3 = "2.0";
                 }
                 else if (R3 == "C-")
                 {
-                    SC3 = "2.3";
+                    SC3 = "1.7";
                 }
                 else if (R3 == "D+")
                 {
-                    SC3 = "2.0";
+                    SC3 = "1.3";
                 }
                 else if (R3 == "D")
                 {
-                    SC3 = "1.7";
+                    SC3 = "1.0";
                 }
-                else if (R3 == "D-")
-                {
-                    SC3 = "1.5";
-                }
+                
                 else if (R3 == "E")
                 {
-                    SC3 = "0";
+                    SC3 = "0.0";
                 }
                 else
                 {
-                    SC3 = "AB";
+                    SC3 = "0.0";
                 }
                 //selecting result R4
                 if (R4 == "A+")
                 {
-                    SC4 = "4";
+                    SC4 = "4.0";
                 }
                 else if (R4 == "A")
                 {
-                    SC4 = "4";
+                    SC4 = "4.0";
                 }
                 else if (R4 == "A-")
                 {
@@ -234,59 +288,217 @@ namespace GPA_Calculator
                 }
                 else if (R4 == "B+")
                 {
-                    SC4 = "3.5";
+                    SC4 = "3.3";
                 }
                 else if (R4 == "B")
                 {
-                    SC4 = "3.3";
+                    SC4 = "3.0";
                 }
                 else if (R4 == "B-")
                 {
-                    SC4 = "3";
+                    SC4 = "2.7";
                 }
                 else if (R4 == "C+")
                 {
-                    SC4 = "2.7";
+                    SC4 = "2.3";
                 }
                 else if (R4 == "C")
                 {
-                    SC4 = "2.5";
+                    SC4 = "2.0";
                 }
                 else if (R4 == "C-")
                 {
-                    SC4 = "2.3";
+                    SC4 = "1.7";
                 }
                 else if (R4 == "D+")
                 {
-                    SC4 = "2.0";
+                    SC4 = "1.3";
                 }
                 else if (R4 == "D")
                 {
-                    SC4 = "1.7";
+                    SC4 = "1.0";
                 }
-                else if (R4 == "D-")
-                {
-                    SC4 = "1.5";
-                }
+               
                 else if (R4 == "E")
                 {
-                    SC4 = "0";
+                    SC4 = "0.0";
                 }
                 else
                 {
-                    SC4 = "AB";
+                    SC4 = "0.0";
+                }
+                //selecting result R5
+                if (R5 == "A+")
+                {
+                    SC5 = "4.0";
+                }
+                else if (R5 == "A")
+                {
+                    SC5 = "4.0";
+                }
+                else if (R5 == "A-")
+                {
+                    SC5 = "3.7";
+                }
+                else if (R5 == "B+")
+                {
+                    SC5 = "3.3";
+                }
+                else if (R5 == "B")
+                {
+                    SC5 = "3.0";
+                }
+                else if (R5 == "B-")
+                {
+                    SC5 = "2.7";
+                }
+                else if (R5 == "C+")
+                {
+                    SC5 = "2.3";
+                }
+                else if (R5 == "C")
+                {
+                    SC5 = "2.0";
+                }
+                else if (R5 == "C-")
+                {
+                    SC5 = "1.7";
+                }
+                else if (R5 == "D+")
+                {
+                    SC5 = "1.3";
+                }
+                else if (R5 == "D")
+                {
+                    SC5 = "1.0";
+                }
+               
+                else if (R5 == "E")
+                {
+                    SC5 = "0.0";
+                }
+                else
+                {
+                    SC5 = "0.0";
+                }
+                //selecting result R6
+                if (R6 == "A+")
+                {
+                    SC6 = "4.0";
+                }
+                else if (R6 == "A")
+                {
+                    SC6 = "4.0";
+                }
+                else if (R6 == "A-")
+                {
+                    SC6 = "3.7";
+                }
+                else if (R6 == "B+")
+                {
+                    SC6 = "3.3";
+                }
+                else if (R6 == "B")
+                {
+                    SC6 = "3.0";
+                }
+                else if (R6 == "B-")
+                {
+                    SC6 = "2.7";
+                }
+                else if (R6 == "C+")
+                {
+                    SC6 = "2.3";
+                }
+                else if (R6 == "C")
+                {
+                    SC6 = "2.0";
+                }
+                else if (R6 == "C-")
+                {
+                    SC6 = "1.7";
+                }
+                else if (R6 == "D+")
+                {
+                    SC6 = "1.3";
+                }
+                else if (R6 == "D")
+                {
+                    SC6 = "1.0";
+                }
+                
+                else if (R6 == "E")
+                {
+                    SC6 = "0.0";
+                }
+                else
+                {
+                    SC6 = "0.0";
+                }
+                //select result R7
+                if (R7 == "A+")
+                {
+                    SC7 = "4.0";
+                }
+                else if (R7 == "A")
+                {
+                    SC7 = "4.0";
+                }
+                else if (R7 == "A-")
+                {
+                    SC7 = "3.7";
+                }
+                else if (R7 == "B+")
+                {
+                    SC7 = "3.3";
+                }
+                else if (R7 == "B")
+                {
+                    SC7 = "3.0";
+                }
+                else if (R7 == "B-")
+                {
+                    SC7 = "2.7";
+                }
+                else if (R7 == "C+")
+                {
+                    SC7 = "2.3";
+                }
+                else if (R7 == "C")
+                {
+                    SC7 = "2.0";
+                }
+                else if (R7 == "C-")
+                {
+                    SC7 = "1.7";
+                }
+                else if (R7 == "D+")
+                {
+                    SC7 = "1.3";
+                }
+                else if (R7 == "D")
+                {
+                    SC7 = "1.0";
+                }
+                
+                else if (R7 == "E")
+                {
+                    SC7 = "0.0";
+                }
+                else
+                {
+                    SC7 = "0.0";
                 }
 
-
                 //dgvTable.Rows.Add(subjectNames, results,credits,gpas, weights);
-                addRows(cbSubject1.Text, R1, SC1, txtCredit1.Text, gpas, cbWeight.Text);
-                addRows(cbSubject2.Text, R2, SC2, txtCredit2.Text, gpas, cbWeight.Text);
-                addRows(cbSubject3.Text, R3, SC3, txtCredit3.Text, gpas, cbWeight.Text);
-                addRows(cbSubject4.Text, R4, SC4, txtCredit4.Text, gpas, cbWeight.Text);
-                addRows(cbSubject5.Text, R5, SC5, txtCredit5.Text, gpas, cbWeight.Text);
-                addRows(cbSubject6.Text, R6, SC6, txtCredit6.Text, gpas, cbWeight.Text);
-                addRows(cbSubject7.Text, R7, SC7, txtCredit7.Text, gpas, cbWeight.Text);
-                addRows(cbSubject8.Text, R8, SC8, txtCredit8.Text, gpas, cbWeight.Text);
+                addRows(cbSubject1.Text, R1, SC1, cbCredit1.Text, gpas, cbWeight.Text);
+                addRows(cbSubject2.Text, R2, SC2, cbCredit2.Text, gpas, cbWeight.Text);
+                addRows(cbSubject3.Text, R3, SC3, cbCredit3.Text, gpas, cbWeight.Text);
+                addRows(cbSubject4.Text, R4, SC4, cbCredit4.Text, gpas, cbWeight.Text);
+                addRows(cbSubject5.Text, R5, SC5, cbCredit5.Text, gpas, cbWeight.Text);
+                addRows(cbSubject6.Text, R6, SC6, cbCredit6.Text, gpas, cbWeight.Text);
+                addRows(cbSubject7.Text, R7, SC7, cbCredit6.Text, gpas, cbWeight.Text);
+                //addRows(cbSubject8.Text, R8, SC8, txtCredit8.Text, gpas, cbWeight.Text);
                 
 
             }
@@ -301,6 +513,8 @@ namespace GPA_Calculator
             string[] row = { Sname, results, subCredits, credit,  gpa, weight };
             dgvTable.Rows.Add(row);
             dgvTable.AllowUserToAddRows = false;
+
+            
         }
         private void btnReset_Click(object sender, EventArgs e)
         {
@@ -309,10 +523,12 @@ namespace GPA_Calculator
 
         void Clear()
         {
-            MessageBox.Show("Clear Succussfully");
-            cbSubject1.Text = cbSubject2.Text = cbSubject3.Text = cbSubject4.Text = cbResult5.Text = cbResult7.Text = cbResult6.Text = cbResult8.Text = cbResult1.Text = cbResult2.Text = cbResult3.Text = cbResult4.Text = cbResult5.Text = cbResult6.Text = cbResult7.Text = cbResult8.Text = cbWeight.Text = txtCredit1.Text = txtCredit2.Text= txtCredit3.Text= txtCredit4.Text= txtCredit5.Text= txtCredit6.Text= txtCredit7.Text= txtCredit8.Text = "";
+            
+            cbSubject1.Text = cbSubject2.Text = cbSubject3.Text = cbSubject4.Text = cbSubject5.Text = cbSubject6.Text = cbSubject7.Text = cbResult1.Text = cbResult2.Text = cbResult3.Text = cbResult4.Text = cbResult5.Text = cbResult6.Text = cbResult7.Text= cbWeight.Text = cbCredit1.Text = cbCredit2.Text= cbCredit3.Text= cbCredit4.Text= cbCredit5.Text= cbCredit6.Text= cbCredit7.Text = "";
+            
             dgvTable.Rows.Clear();
             cbSubject1.Select();
+            MessageBox.Show("Clear Succussfully");
         }
     }
 }
