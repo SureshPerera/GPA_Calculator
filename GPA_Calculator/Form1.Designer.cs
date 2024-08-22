@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.lblSubject = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.dgvTable = new System.Windows.Forms.DataGridView();
@@ -109,14 +109,14 @@
             this.dgvTable.Margin = new System.Windows.Forms.Padding(4);
             this.dgvTable.Name = "dgvTable";
             this.dgvTable.RowHeadersWidth = 51;
-            dataGridViewCellStyle10.BackColor = System.Drawing.Color.MistyRose;
-            dataGridViewCellStyle10.Font = new System.Drawing.Font("Arial Rounded MT Bold", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle10.ForeColor = System.Drawing.Color.DarkBlue;
-            dataGridViewCellStyle10.NullValue = null;
-            dataGridViewCellStyle10.SelectionBackColor = System.Drawing.Color.DarkOliveGreen;
-            dataGridViewCellStyle10.SelectionForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle10.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvTable.RowsDefaultCellStyle = dataGridViewCellStyle10;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.MistyRose;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Arial Rounded MT Bold", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.DarkBlue;
+            dataGridViewCellStyle1.NullValue = null;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.DarkOliveGreen;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvTable.RowsDefaultCellStyle = dataGridViewCellStyle1;
             this.dgvTable.RowTemplate.Height = 24;
             this.dgvTable.Size = new System.Drawing.Size(591, 357);
             this.dgvTable.TabIndex = 3;
@@ -202,6 +202,7 @@
             // btnReset
             // 
             this.btnReset.BackColor = System.Drawing.Color.YellowGreen;
+            this.btnReset.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnReset.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnReset.Location = new System.Drawing.Point(195, 324);
             this.btnReset.Margin = new System.Windows.Forms.Padding(4);
@@ -215,6 +216,7 @@
             // btnSubmit
             // 
             this.btnSubmit.BackColor = System.Drawing.Color.YellowGreen;
+            this.btnSubmit.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnSubmit.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSubmit.Location = new System.Drawing.Point(313, 324);
             this.btnSubmit.Margin = new System.Windows.Forms.Padding(4);
@@ -227,6 +229,7 @@
             // 
             // cbResult1
             // 
+            this.cbResult1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.cbResult1.FormattingEnabled = true;
             this.cbResult1.Items.AddRange(new object[] {
             "A+",
@@ -249,6 +252,7 @@
             // 
             // cbResult2
             // 
+            this.cbResult2.Cursor = System.Windows.Forms.Cursors.Hand;
             this.cbResult2.FormattingEnabled = true;
             this.cbResult2.Items.AddRange(new object[] {
             "A+",
@@ -270,6 +274,7 @@
             // 
             // cbResult3
             // 
+            this.cbResult3.Cursor = System.Windows.Forms.Cursors.Hand;
             this.cbResult3.FormattingEnabled = true;
             this.cbResult3.Items.AddRange(new object[] {
             "A+",
@@ -291,6 +296,7 @@
             // 
             // cbResult4
             // 
+            this.cbResult4.Cursor = System.Windows.Forms.Cursors.Hand;
             this.cbResult4.FormattingEnabled = true;
             this.cbResult4.Items.AddRange(new object[] {
             "A+",
@@ -312,6 +318,7 @@
             // 
             // cbResult5
             // 
+            this.cbResult5.Cursor = System.Windows.Forms.Cursors.Hand;
             this.cbResult5.FormattingEnabled = true;
             this.cbResult5.Items.AddRange(new object[] {
             "A+",
@@ -333,6 +340,7 @@
             // 
             // cbResult6
             // 
+            this.cbResult6.Cursor = System.Windows.Forms.Cursors.Hand;
             this.cbResult6.FormattingEnabled = true;
             this.cbResult6.Items.AddRange(new object[] {
             "A+",
@@ -354,6 +362,7 @@
             // 
             // cbResult7
             // 
+            this.cbResult7.Cursor = System.Windows.Forms.Cursors.Hand;
             this.cbResult7.FormattingEnabled = true;
             this.cbResult7.Items.AddRange(new object[] {
             "A+",
@@ -375,6 +384,7 @@
             // 
             // cbWeight
             // 
+            this.cbWeight.Cursor = System.Windows.Forms.Cursors.Hand;
             this.cbWeight.FormattingEnabled = true;
             this.cbWeight.Items.AddRange(new object[] {
             "1",
@@ -389,8 +399,10 @@
             // 
             // cbSubject1
             // 
+            this.cbSubject1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.cbSubject1.FormattingEnabled = true;
             this.cbSubject1.Items.AddRange(new object[] {
+            "---1ST SEM---",
             "Principles Of Management ",
             "Introduction To Information Technology",
             "Business Mathematics",
@@ -398,6 +410,8 @@
             "Microeconomics",
             "Basic Tamil I",
             "Basic Sinhala I",
+            "",
+            "---2ND SEM---",
             "Human Resource Management ",
             "Financial Accounting ",
             "Business Statistics",
@@ -405,12 +419,16 @@
             "Marketing Management",
             "Basic Tamil II",
             "Basic Sinhala II",
+            "",
+            "---3RD SEM---",
             "Microeconomic",
             "Cost and Management Accounting ",
             "Management Information System",
             "Business Skill I",
             "BusinessLaw",
             "Career Guidance",
+            "",
+            "---4TH SEM---",
             "Operations Management ",
             "Financial Managment ",
             "Business Skill II",
@@ -418,54 +436,84 @@
             "Fundamental Sociology and Phychology",
             "Peace and Social Harmony ",
             "Basic Science ",
+            "",
+            "---5TH SEM---",
             "Organizational Buhavior",
             "Operational Reserch",
             "Total Quality Management",
             "Organizational Development ",
             "Labor Law and Relations ",
             "Micro Finance ",
+            "Service Marketing ",
+            "Sales Manegement and Retail Marketing ",
+            "Marketing Research",
+            "Performance Appraisal",
+            "Human Resource Planing ",
+            "Investment and Portfolio Management",
+            "Advance Financial Accounting",
+            "Programming Concepts",
+            "Systems Analysis and Design",
+            "Data Communication and Computer Networks",
+            "",
+            "---6TH SEM---",
             "Project Manegment ",
             "Managerial Economics",
             "Reserch Methods",
             "Strategic Management ",
             "Contempory Issues in Management ",
             "Disaster Management ",
+            "Laber Law and Relations",
+            "Concumer Behavior ",
+            "Integarated Marketing Communication",
+            "Human Resource Development ",
+            "Auditing ",
+            "Computer Based Accounting",
+            "Professional Ethics and Responsibility",
+            "Software Engineering ",
+            "",
+            "---7TH SEM--- ",
             "Computer Based Data Analysis",
             "Development Economics",
             "Service Management",
             "International Business",
             "E-Commerce ",
-            "Independent Research in Business Management ",
-            "Internship in Business Management ",
-            "Service Marketing ",
-            "Sales Manegement and Retail Marketing ",
-            "Marketing Research",
-            "Integarated Marketing Communication",
+            "Contempory Issued in Management",
+            "E-Marketing ",
+            "Strategic Marketing",
+            "International Marketing ",
             "Brand Management ",
-            "Performance Appraisal",
-            "Human Resource Planing ",
-            "Human Resource Development ",
             "Strategic Human Resource Managment ",
             "International Human Resource Management ",
             "Human Resource Information System",
             "Human resource Accounting ",
-            "Investment and Portfolio Management",
-            "Advance Financial Accounting",
-            "Auditing ",
-            "Computer Based Accounting ",
             "Taxation",
             "Advance Accounting Theory",
             "Public sector Accounting ",
-            "Programming Concepts",
-            "Systems Analysis and Design",
-            "Data Communication and Computer Networks",
-            "Professional Ethics and Responsibility",
-            "Software Engineering ",
+            "Financial Reporting ",
             "Object Oriented Programming ",
             "Web Development ",
             "Enterprise Resource Planning Sysytem",
             "Software Quality Assurance",
-            "DataBase Management System"});
+            "DataBase Management System",
+            "",
+            "---8TH SEM---",
+            "Independent Research in Business Management ",
+            "Internship in Business Management ",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            " ",
+            "",
+            "",
+            ""});
             this.cbSubject1.Location = new System.Drawing.Point(30, 74);
             this.cbSubject1.Name = "cbSubject1";
             this.cbSubject1.Size = new System.Drawing.Size(256, 26);
@@ -474,8 +522,10 @@
             // 
             // cbSubject2
             // 
+            this.cbSubject2.Cursor = System.Windows.Forms.Cursors.Hand;
             this.cbSubject2.FormattingEnabled = true;
             this.cbSubject2.Items.AddRange(new object[] {
+            "---1ST SEM---",
             "Principles Of Management ",
             "Introduction To Information Technology",
             "Business Mathematics",
@@ -483,6 +533,8 @@
             "Microeconomics",
             "Basic Tamil I",
             "Basic Sinhala I",
+            "",
+            "---2ND SEM---",
             "Human Resource Management ",
             "Financial Accounting ",
             "Business Statistics",
@@ -490,12 +542,16 @@
             "Marketing Management",
             "Basic Tamil II",
             "Basic Sinhala II",
+            "",
+            "---3RD SEM---",
             "Microeconomic",
             "Cost and Management Accounting ",
             "Management Information System",
             "Business Skill I",
             "BusinessLaw",
             "Career Guidance",
+            "",
+            "---4TH SEM---",
             "Operations Management ",
             "Financial Managment ",
             "Business Skill II",
@@ -503,54 +559,69 @@
             "Fundamental Sociology and Phychology",
             "Peace and Social Harmony ",
             "Basic Science ",
+            "",
+            "---5TH SEM---",
             "Organizational Buhavior",
             "Operational Reserch",
             "Total Quality Management",
             "Organizational Development ",
             "Labor Law and Relations ",
             "Micro Finance ",
+            "Service Marketing ",
+            "Sales Manegement and Retail Marketing ",
+            "Marketing Research",
+            "Performance Appraisal",
+            "Human Resource Planing ",
+            "Investment and Portfolio Management",
+            "Advance Financial Accounting",
+            "Programming Concepts",
+            "Systems Analysis and Design",
+            "Data Communication and Computer Networks",
+            "",
+            "---6TH SEM---",
             "Project Manegment ",
             "Managerial Economics",
             "Reserch Methods",
             "Strategic Management ",
             "Contempory Issues in Management ",
             "Disaster Management ",
+            "Laber Law and Relations",
+            "Concumer Behavior ",
+            "Integarated Marketing Communication",
+            "Human Resource Development ",
+            "Auditing ",
+            "Computer Based Accounting",
+            "Professional Ethics and Responsibility",
+            "Software Engineering ",
+            "",
+            "---7TH SEM--- ",
             "Computer Based Data Analysis",
             "Development Economics",
             "Service Management",
             "International Business",
             "E-Commerce ",
-            "Independent Research in Business Management ",
-            "Internship in Business Management ",
-            "Service Marketing ",
-            "Sales Manegement and Retail Marketing ",
-            "Marketing Research",
-            "Integarated Marketing Communication",
+            "Contempory Issued in Management",
+            "E-Marketing ",
+            "Strategic Marketing",
+            "International Marketing ",
             "Brand Management ",
-            "Performance Appraisal",
-            "Human Resource Planing ",
-            "Human Resource Development ",
             "Strategic Human Resource Managment ",
             "International Human Resource Management ",
             "Human Resource Information System",
             "Human resource Accounting ",
-            "Investment and Portfolio Management",
-            "Advance Financial Accounting",
-            "Auditing ",
-            "Computer Based Accounting ",
             "Taxation",
             "Advance Accounting Theory",
             "Public sector Accounting ",
-            "Programming Concepts",
-            "Systems Analysis and Design",
-            "Data Communication and Computer Networks",
-            "Professional Ethics and Responsibility",
-            "Software Engineering ",
+            "Financial Reporting ",
             "Object Oriented Programming ",
             "Web Development ",
             "Enterprise Resource Planning Sysytem",
             "Software Quality Assurance",
-            "DataBase Management System"});
+            "DataBase Management System",
+            "",
+            "---8TH SEM---",
+            "Independent Research in Business Management ",
+            "Internship in Business Management "});
             this.cbSubject2.Location = new System.Drawing.Point(30, 103);
             this.cbSubject2.Name = "cbSubject2";
             this.cbSubject2.Size = new System.Drawing.Size(256, 26);
@@ -558,8 +629,10 @@
             // 
             // cbSubject3
             // 
+            this.cbSubject3.Cursor = System.Windows.Forms.Cursors.Hand;
             this.cbSubject3.FormattingEnabled = true;
             this.cbSubject3.Items.AddRange(new object[] {
+            "---1ST SEM---",
             "Principles Of Management ",
             "Introduction To Information Technology",
             "Business Mathematics",
@@ -567,6 +640,8 @@
             "Microeconomics",
             "Basic Tamil I",
             "Basic Sinhala I",
+            "",
+            "---2ND SEM---",
             "Human Resource Management ",
             "Financial Accounting ",
             "Business Statistics",
@@ -574,12 +649,16 @@
             "Marketing Management",
             "Basic Tamil II",
             "Basic Sinhala II",
+            "",
+            "---3RD SEM---",
             "Microeconomic",
             "Cost and Management Accounting ",
             "Management Information System",
             "Business Skill I",
             "BusinessLaw",
             "Career Guidance",
+            "",
+            "---4TH SEM---",
             "Operations Management ",
             "Financial Managment ",
             "Business Skill II",
@@ -587,54 +666,69 @@
             "Fundamental Sociology and Phychology",
             "Peace and Social Harmony ",
             "Basic Science ",
+            "",
+            "---5TH SEM---",
             "Organizational Buhavior",
             "Operational Reserch",
             "Total Quality Management",
             "Organizational Development ",
             "Labor Law and Relations ",
             "Micro Finance ",
+            "Service Marketing ",
+            "Sales Manegement and Retail Marketing ",
+            "Marketing Research",
+            "Performance Appraisal",
+            "Human Resource Planing ",
+            "Investment and Portfolio Management",
+            "Advance Financial Accounting",
+            "Programming Concepts",
+            "Systems Analysis and Design",
+            "Data Communication and Computer Networks",
+            "",
+            "---6TH SEM---",
             "Project Manegment ",
             "Managerial Economics",
             "Reserch Methods",
             "Strategic Management ",
             "Contempory Issues in Management ",
             "Disaster Management ",
+            "Laber Law and Relations",
+            "Concumer Behavior ",
+            "Integarated Marketing Communication",
+            "Human Resource Development ",
+            "Auditing ",
+            "Computer Based Accounting",
+            "Professional Ethics and Responsibility",
+            "Software Engineering ",
+            "",
+            "---7TH SEM--- ",
             "Computer Based Data Analysis",
             "Development Economics",
             "Service Management",
             "International Business",
             "E-Commerce ",
-            "Independent Research in Business Management ",
-            "Internship in Business Management ",
-            "Service Marketing ",
-            "Sales Manegement and Retail Marketing ",
-            "Marketing Research",
-            "Integarated Marketing Communication",
+            "Contempory Issued in Management",
+            "E-Marketing ",
+            "Strategic Marketing",
+            "International Marketing ",
             "Brand Management ",
-            "Performance Appraisal",
-            "Human Resource Planing ",
-            "Human Resource Development ",
             "Strategic Human Resource Managment ",
             "International Human Resource Management ",
             "Human Resource Information System",
             "Human resource Accounting ",
-            "Investment and Portfolio Management",
-            "Advance Financial Accounting",
-            "Auditing ",
-            "Computer Based Accounting ",
             "Taxation",
             "Advance Accounting Theory",
             "Public sector Accounting ",
-            "Programming Concepts",
-            "Systems Analysis and Design",
-            "Data Communication and Computer Networks",
-            "Professional Ethics and Responsibility",
-            "Software Engineering ",
+            "Financial Reporting ",
             "Object Oriented Programming ",
             "Web Development ",
             "Enterprise Resource Planning Sysytem",
             "Software Quality Assurance",
-            "DataBase Management System"});
+            "DataBase Management System",
+            "",
+            "---8TH SEM---",
+            "Independent Research in Business Management ",
+            "Internship in Business Management "});
             this.cbSubject3.Location = new System.Drawing.Point(30, 135);
             this.cbSubject3.Name = "cbSubject3";
             this.cbSubject3.Size = new System.Drawing.Size(256, 26);
@@ -642,8 +736,10 @@
             // 
             // cbSubject4
             // 
+            this.cbSubject4.Cursor = System.Windows.Forms.Cursors.Hand;
             this.cbSubject4.FormattingEnabled = true;
             this.cbSubject4.Items.AddRange(new object[] {
+            "---1ST SEM---",
             "Principles Of Management ",
             "Introduction To Information Technology",
             "Business Mathematics",
@@ -651,6 +747,8 @@
             "Microeconomics",
             "Basic Tamil I",
             "Basic Sinhala I",
+            "",
+            "---2ND SEM---",
             "Human Resource Management ",
             "Financial Accounting ",
             "Business Statistics",
@@ -658,12 +756,16 @@
             "Marketing Management",
             "Basic Tamil II",
             "Basic Sinhala II",
+            "",
+            "---3RD SEM---",
             "Microeconomic",
             "Cost and Management Accounting ",
             "Management Information System",
             "Business Skill I",
             "BusinessLaw",
             "Career Guidance",
+            "",
+            "---4TH SEM---",
             "Operations Management ",
             "Financial Managment ",
             "Business Skill II",
@@ -671,54 +773,69 @@
             "Fundamental Sociology and Phychology",
             "Peace and Social Harmony ",
             "Basic Science ",
+            "",
+            "---5TH SEM---",
             "Organizational Buhavior",
             "Operational Reserch",
             "Total Quality Management",
             "Organizational Development ",
             "Labor Law and Relations ",
             "Micro Finance ",
+            "Service Marketing ",
+            "Sales Manegement and Retail Marketing ",
+            "Marketing Research",
+            "Performance Appraisal",
+            "Human Resource Planing ",
+            "Investment and Portfolio Management",
+            "Advance Financial Accounting",
+            "Programming Concepts",
+            "Systems Analysis and Design",
+            "Data Communication and Computer Networks",
+            "",
+            "---6TH SEM---",
             "Project Manegment ",
             "Managerial Economics",
             "Reserch Methods",
             "Strategic Management ",
             "Contempory Issues in Management ",
             "Disaster Management ",
+            "Laber Law and Relations",
+            "Concumer Behavior ",
+            "Integarated Marketing Communication",
+            "Human Resource Development ",
+            "Auditing ",
+            "Computer Based Accounting",
+            "Professional Ethics and Responsibility",
+            "Software Engineering ",
+            "",
+            "---7TH SEM--- ",
             "Computer Based Data Analysis",
             "Development Economics",
             "Service Management",
             "International Business",
             "E-Commerce ",
-            "Independent Research in Business Management ",
-            "Internship in Business Management ",
-            "Service Marketing ",
-            "Sales Manegement and Retail Marketing ",
-            "Marketing Research",
-            "Integarated Marketing Communication",
+            "Contempory Issued in Management",
+            "E-Marketing ",
+            "Strategic Marketing",
+            "International Marketing ",
             "Brand Management ",
-            "Performance Appraisal",
-            "Human Resource Planing ",
-            "Human Resource Development ",
             "Strategic Human Resource Managment ",
             "International Human Resource Management ",
             "Human Resource Information System",
             "Human resource Accounting ",
-            "Investment and Portfolio Management",
-            "Advance Financial Accounting",
-            "Auditing ",
-            "Computer Based Accounting ",
             "Taxation",
             "Advance Accounting Theory",
             "Public sector Accounting ",
-            "Programming Concepts",
-            "Systems Analysis and Design",
-            "Data Communication and Computer Networks",
-            "Professional Ethics and Responsibility",
-            "Software Engineering ",
+            "Financial Reporting ",
             "Object Oriented Programming ",
             "Web Development ",
             "Enterprise Resource Planning Sysytem",
             "Software Quality Assurance",
-            "DataBase Management System"});
+            "DataBase Management System",
+            "",
+            "---8TH SEM---",
+            "Independent Research in Business Management ",
+            "Internship in Business Management "});
             this.cbSubject4.Location = new System.Drawing.Point(30, 166);
             this.cbSubject4.Name = "cbSubject4";
             this.cbSubject4.Size = new System.Drawing.Size(256, 26);
@@ -726,8 +843,10 @@
             // 
             // cbSubject5
             // 
+            this.cbSubject5.Cursor = System.Windows.Forms.Cursors.Hand;
             this.cbSubject5.FormattingEnabled = true;
             this.cbSubject5.Items.AddRange(new object[] {
+            "---1ST SEM---",
             "Principles Of Management ",
             "Introduction To Information Technology",
             "Business Mathematics",
@@ -735,6 +854,8 @@
             "Microeconomics",
             "Basic Tamil I",
             "Basic Sinhala I",
+            "",
+            "---2ND SEM---",
             "Human Resource Management ",
             "Financial Accounting ",
             "Business Statistics",
@@ -742,12 +863,16 @@
             "Marketing Management",
             "Basic Tamil II",
             "Basic Sinhala II",
+            "",
+            "---3RD SEM---",
             "Microeconomic",
             "Cost and Management Accounting ",
             "Management Information System",
             "Business Skill I",
             "BusinessLaw",
             "Career Guidance",
+            "",
+            "---4TH SEM---",
             "Operations Management ",
             "Financial Managment ",
             "Business Skill II",
@@ -755,54 +880,69 @@
             "Fundamental Sociology and Phychology",
             "Peace and Social Harmony ",
             "Basic Science ",
+            "",
+            "---5TH SEM---",
             "Organizational Buhavior",
             "Operational Reserch",
             "Total Quality Management",
             "Organizational Development ",
             "Labor Law and Relations ",
             "Micro Finance ",
+            "Service Marketing ",
+            "Sales Manegement and Retail Marketing ",
+            "Marketing Research",
+            "Performance Appraisal",
+            "Human Resource Planing ",
+            "Investment and Portfolio Management",
+            "Advance Financial Accounting",
+            "Programming Concepts",
+            "Systems Analysis and Design",
+            "Data Communication and Computer Networks",
+            "",
+            "---6TH SEM---",
             "Project Manegment ",
             "Managerial Economics",
             "Reserch Methods",
             "Strategic Management ",
             "Contempory Issues in Management ",
             "Disaster Management ",
+            "Laber Law and Relations",
+            "Concumer Behavior ",
+            "Integarated Marketing Communication",
+            "Human Resource Development ",
+            "Auditing ",
+            "Computer Based Accounting",
+            "Professional Ethics and Responsibility",
+            "Software Engineering ",
+            "",
+            "---7TH SEM--- ",
             "Computer Based Data Analysis",
             "Development Economics",
             "Service Management",
             "International Business",
             "E-Commerce ",
-            "Independent Research in Business Management ",
-            "Internship in Business Management ",
-            "Service Marketing ",
-            "Sales Manegement and Retail Marketing ",
-            "Marketing Research",
-            "Integarated Marketing Communication",
+            "Contempory Issued in Management",
+            "E-Marketing ",
+            "Strategic Marketing",
+            "International Marketing ",
             "Brand Management ",
-            "Performance Appraisal",
-            "Human Resource Planing ",
-            "Human Resource Development ",
             "Strategic Human Resource Managment ",
             "International Human Resource Management ",
             "Human Resource Information System",
             "Human resource Accounting ",
-            "Investment and Portfolio Management",
-            "Advance Financial Accounting",
-            "Auditing ",
-            "Computer Based Accounting ",
             "Taxation",
             "Advance Accounting Theory",
             "Public sector Accounting ",
-            "Programming Concepts",
-            "Systems Analysis and Design",
-            "Data Communication and Computer Networks",
-            "Professional Ethics and Responsibility",
-            "Software Engineering ",
+            "Financial Reporting ",
             "Object Oriented Programming ",
             "Web Development ",
             "Enterprise Resource Planning Sysytem",
             "Software Quality Assurance",
-            "DataBase Management System"});
+            "DataBase Management System",
+            "",
+            "---8TH SEM---",
+            "Independent Research in Business Management ",
+            "Internship in Business Management "});
             this.cbSubject5.Location = new System.Drawing.Point(30, 198);
             this.cbSubject5.Name = "cbSubject5";
             this.cbSubject5.Size = new System.Drawing.Size(256, 26);
@@ -810,8 +950,10 @@
             // 
             // cbSubject6
             // 
+            this.cbSubject6.Cursor = System.Windows.Forms.Cursors.Hand;
             this.cbSubject6.FormattingEnabled = true;
             this.cbSubject6.Items.AddRange(new object[] {
+            "---1ST SEM---",
             "Principles Of Management ",
             "Introduction To Information Technology",
             "Business Mathematics",
@@ -819,6 +961,8 @@
             "Microeconomics",
             "Basic Tamil I",
             "Basic Sinhala I",
+            "",
+            "---2ND SEM---",
             "Human Resource Management ",
             "Financial Accounting ",
             "Business Statistics",
@@ -826,12 +970,16 @@
             "Marketing Management",
             "Basic Tamil II",
             "Basic Sinhala II",
+            "",
+            "---3RD SEM---",
             "Microeconomic",
             "Cost and Management Accounting ",
             "Management Information System",
             "Business Skill I",
             "BusinessLaw",
             "Career Guidance",
+            "",
+            "---4TH SEM---",
             "Operations Management ",
             "Financial Managment ",
             "Business Skill II",
@@ -839,54 +987,69 @@
             "Fundamental Sociology and Phychology",
             "Peace and Social Harmony ",
             "Basic Science ",
+            "",
+            "---5TH SEM---",
             "Organizational Buhavior",
             "Operational Reserch",
             "Total Quality Management",
             "Organizational Development ",
             "Labor Law and Relations ",
             "Micro Finance ",
+            "Service Marketing ",
+            "Sales Manegement and Retail Marketing ",
+            "Marketing Research",
+            "Performance Appraisal",
+            "Human Resource Planing ",
+            "Investment and Portfolio Management",
+            "Advance Financial Accounting",
+            "Programming Concepts",
+            "Systems Analysis and Design",
+            "Data Communication and Computer Networks",
+            "",
+            "---6TH SEM---",
             "Project Manegment ",
             "Managerial Economics",
             "Reserch Methods",
             "Strategic Management ",
             "Contempory Issues in Management ",
             "Disaster Management ",
+            "Laber Law and Relations",
+            "Concumer Behavior ",
+            "Integarated Marketing Communication",
+            "Human Resource Development ",
+            "Auditing ",
+            "Computer Based Accounting",
+            "Professional Ethics and Responsibility",
+            "Software Engineering ",
+            "",
+            "---7TH SEM--- ",
             "Computer Based Data Analysis",
             "Development Economics",
             "Service Management",
             "International Business",
             "E-Commerce ",
-            "Independent Research in Business Management ",
-            "Internship in Business Management ",
-            "Service Marketing ",
-            "Sales Manegement and Retail Marketing ",
-            "Marketing Research",
-            "Integarated Marketing Communication",
+            "Contempory Issued in Management",
+            "E-Marketing ",
+            "Strategic Marketing",
+            "International Marketing ",
             "Brand Management ",
-            "Performance Appraisal",
-            "Human Resource Planing ",
-            "Human Resource Development ",
             "Strategic Human Resource Managment ",
             "International Human Resource Management ",
             "Human Resource Information System",
             "Human resource Accounting ",
-            "Investment and Portfolio Management",
-            "Advance Financial Accounting",
-            "Auditing ",
-            "Computer Based Accounting ",
             "Taxation",
             "Advance Accounting Theory",
             "Public sector Accounting ",
-            "Programming Concepts",
-            "Systems Analysis and Design",
-            "Data Communication and Computer Networks",
-            "Professional Ethics and Responsibility",
-            "Software Engineering ",
+            "Financial Reporting ",
             "Object Oriented Programming ",
             "Web Development ",
             "Enterprise Resource Planning Sysytem",
             "Software Quality Assurance",
-            "DataBase Management System"});
+            "DataBase Management System",
+            "",
+            "---8TH SEM---",
+            "Independent Research in Business Management ",
+            "Internship in Business Management "});
             this.cbSubject6.Location = new System.Drawing.Point(30, 230);
             this.cbSubject6.Name = "cbSubject6";
             this.cbSubject6.Size = new System.Drawing.Size(256, 26);
@@ -894,8 +1057,10 @@
             // 
             // cbSubject7
             // 
+            this.cbSubject7.Cursor = System.Windows.Forms.Cursors.Hand;
             this.cbSubject7.FormattingEnabled = true;
             this.cbSubject7.Items.AddRange(new object[] {
+            "---1ST SEM---",
             "Principles Of Management ",
             "Introduction To Information Technology",
             "Business Mathematics",
@@ -903,6 +1068,8 @@
             "Microeconomics",
             "Basic Tamil I",
             "Basic Sinhala I",
+            "",
+            "---2ND SEM---",
             "Human Resource Management ",
             "Financial Accounting ",
             "Business Statistics",
@@ -910,12 +1077,16 @@
             "Marketing Management",
             "Basic Tamil II",
             "Basic Sinhala II",
+            "",
+            "---3RD SEM---",
             "Microeconomic",
             "Cost and Management Accounting ",
             "Management Information System",
             "Business Skill I",
             "BusinessLaw",
             "Career Guidance",
+            "",
+            "---4TH SEM---",
             "Operations Management ",
             "Financial Managment ",
             "Business Skill II",
@@ -923,54 +1094,69 @@
             "Fundamental Sociology and Phychology",
             "Peace and Social Harmony ",
             "Basic Science ",
+            "",
+            "---5TH SEM---",
             "Organizational Buhavior",
             "Operational Reserch",
             "Total Quality Management",
             "Organizational Development ",
             "Labor Law and Relations ",
             "Micro Finance ",
+            "Service Marketing ",
+            "Sales Manegement and Retail Marketing ",
+            "Marketing Research",
+            "Performance Appraisal",
+            "Human Resource Planing ",
+            "Investment and Portfolio Management",
+            "Advance Financial Accounting",
+            "Programming Concepts",
+            "Systems Analysis and Design",
+            "Data Communication and Computer Networks",
+            "",
+            "---6TH SEM---",
             "Project Manegment ",
             "Managerial Economics",
             "Reserch Methods",
             "Strategic Management ",
             "Contempory Issues in Management ",
             "Disaster Management ",
+            "Laber Law and Relations",
+            "Concumer Behavior ",
+            "Integarated Marketing Communication",
+            "Human Resource Development ",
+            "Auditing ",
+            "Computer Based Accounting",
+            "Professional Ethics and Responsibility",
+            "Software Engineering ",
+            "",
+            "---7TH SEM--- ",
             "Computer Based Data Analysis",
             "Development Economics",
             "Service Management",
             "International Business",
             "E-Commerce ",
-            "Independent Research in Business Management ",
-            "Internship in Business Management ",
-            "Service Marketing ",
-            "Sales Manegement and Retail Marketing ",
-            "Marketing Research",
-            "Integarated Marketing Communication",
+            "Contempory Issued in Management",
+            "E-Marketing ",
+            "Strategic Marketing",
+            "International Marketing ",
             "Brand Management ",
-            "Performance Appraisal",
-            "Human Resource Planing ",
-            "Human Resource Development ",
             "Strategic Human Resource Managment ",
             "International Human Resource Management ",
             "Human Resource Information System",
             "Human resource Accounting ",
-            "Investment and Portfolio Management",
-            "Advance Financial Accounting",
-            "Auditing ",
-            "Computer Based Accounting ",
             "Taxation",
             "Advance Accounting Theory",
             "Public sector Accounting ",
-            "Programming Concepts",
-            "Systems Analysis and Design",
-            "Data Communication and Computer Networks",
-            "Professional Ethics and Responsibility",
-            "Software Engineering ",
+            "Financial Reporting ",
             "Object Oriented Programming ",
             "Web Development ",
             "Enterprise Resource Planning Sysytem",
             "Software Quality Assurance",
-            "DataBase Management System"});
+            "DataBase Management System",
+            "",
+            "---8TH SEM---",
+            "Independent Research in Business Management ",
+            "Internship in Business Management "});
             this.cbSubject7.Location = new System.Drawing.Point(30, 261);
             this.cbSubject7.Name = "cbSubject7";
             this.cbSubject7.Size = new System.Drawing.Size(256, 26);
@@ -979,6 +1165,7 @@
             // btnTotal
             // 
             this.btnTotal.BackColor = System.Drawing.Color.YellowGreen;
+            this.btnTotal.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnTotal.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnTotal.Location = new System.Drawing.Point(440, 324);
             this.btnTotal.Margin = new System.Windows.Forms.Padding(4);
@@ -991,6 +1178,7 @@
             // 
             // cbCredit1
             // 
+            this.cbCredit1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.cbCredit1.FormattingEnabled = true;
             this.cbCredit1.Items.AddRange(new object[] {
             "0",
@@ -1007,6 +1195,7 @@
             // 
             // cbCredit2
             // 
+            this.cbCredit2.Cursor = System.Windows.Forms.Cursors.Hand;
             this.cbCredit2.FormattingEnabled = true;
             this.cbCredit2.Items.AddRange(new object[] {
             "0",
@@ -1023,6 +1212,7 @@
             // 
             // cbCredit3
             // 
+            this.cbCredit3.Cursor = System.Windows.Forms.Cursors.Hand;
             this.cbCredit3.FormattingEnabled = true;
             this.cbCredit3.Items.AddRange(new object[] {
             "0",
@@ -1039,6 +1229,7 @@
             // 
             // cbCredit4
             // 
+            this.cbCredit4.Cursor = System.Windows.Forms.Cursors.Hand;
             this.cbCredit4.FormattingEnabled = true;
             this.cbCredit4.Items.AddRange(new object[] {
             "0",
@@ -1055,6 +1246,7 @@
             // 
             // cbCredit5
             // 
+            this.cbCredit5.Cursor = System.Windows.Forms.Cursors.Hand;
             this.cbCredit5.FormattingEnabled = true;
             this.cbCredit5.Items.AddRange(new object[] {
             "0",
@@ -1071,6 +1263,7 @@
             // 
             // cbCredit6
             // 
+            this.cbCredit6.Cursor = System.Windows.Forms.Cursors.Hand;
             this.cbCredit6.FormattingEnabled = true;
             this.cbCredit6.Items.AddRange(new object[] {
             "0",
@@ -1087,6 +1280,7 @@
             // 
             // cbCredit7
             // 
+            this.cbCredit7.Cursor = System.Windows.Forms.Cursors.Hand;
             this.cbCredit7.FormattingEnabled = true;
             this.cbCredit7.Items.AddRange(new object[] {
             "0",
